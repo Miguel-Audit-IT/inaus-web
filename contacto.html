@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5CMP6FFY3T"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-5CMP6FFY3T');
-    </script>
-</head>
-<body>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,6 +81,15 @@
             border-left: 3px solid transparent;
         }
     </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CMP6FFY3T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5CMP6FFY3T');
+    </script>
 </head>
 
 <body style="background-color: #030303; color: white;">
@@ -235,65 +235,70 @@
                 </div>
 
                 <div class="col-lg-8 p-5">
-                    <form id="intelligentForm" action="https://formspree.io/f/xnjwdbjp" method="POST"></form>
-                    <div class="row g-4 mb-4">
-                        <div class="col-md-6">
-                            <label class="form-label small font-code text-muted">Nombre del Responsable</label>
-                            <input type="text" name="nombre" class="form-control inaus-input"
-                                placeholder="Ej. Juan Pérez" required>
+                    <form id="intelligentForm" action="https://formspree.io/f/xnjwdbjp" method="POST">
+                        
+                        <input type="text" name="_gotcha" style="display:none" />
+
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label small font-code text-muted">Nombre del Responsable</label>
+                                <input type="text" name="nombre" class="form-control inaus-input"
+                                    placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small font-code text-muted">Email Corporativo</label>
+                                <input type="email" name="email" class="form-control inaus-input"
+                                    placeholder="correo@empresa.com" required>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label class="form-label small font-code text-muted">Email Corporativo</label>
-                            <input type="email" name="email" class="form-control inaus-input"
-                                placeholder="correo@empresa.com" required>
+
+                        <div class="mb-4">
+                            <label class="form-label small font-code text-muted">Requerimiento a Entidad</label>
+                            <select class="form-select inaus-input fw-bold" name="departamento" id="departmentSelect"
+                                onchange="toggleDynamicFields()" required style="cursor: pointer;">
+                                <option value="" selected disabled>Seleccione la división de INAUS...</option>
+                                <option value="auditoria">INAUS Audit: Bolivia (Auditoría Fiscal & NIIF)</option>
+                                <option value="software">INAUS Tech: Desarrollo de Software (Multicloud/SaaS)</option>
+                                <option value="laboratorio">INAUS Tech: Laboratorio Chile (Recuperación Hardware)
+                                </option>
+                            </select>
                         </div>
-                    </div>
 
-                    <div class="mb-4">
-                        <label class="form-label small font-code text-muted">Requerimiento a Entidad</label>
-                        <select class="form-select inaus-input fw-bold" name="departamento" id="departmentSelect"
-                            onchange="toggleDynamicFields()" required style="cursor: pointer;">
-                            <option value="" selected disabled>Seleccione la división de INAUS...</option>
-                            <option value="auditoria">INAUS Audit: Bolivia (Auditoría Fiscal & NIIF)</option>
-                            <option value="software">INAUS Tech: Desarrollo de Software (Multicloud/SaaS)</option>
-                            <option value="laboratorio">INAUS Tech: Laboratorio Chile (Recuperación Hardware)
-                            </option>
-                        </select>
-                    </div>
+                        <div id="field-audit" class="dynamic-field-dark mb-4 p-4"
+                            style="border-left-color: #3b82f6; display: none;">
+                            <label class="form-label small font-code text-white">Tipo de Entidad a Auditar</label>
+                            <input type="text" name="tipo_empresa" class="form-control inaus-input form-control-sm"
+                                placeholder="Ej: Empresa Minera, Constructora, SRL...">
+                        </div>
 
-                    <div id="field-audit" class="dynamic-field-dark mb-4 p-4"
-                        style="border-left-color: #3b82f6; display: none;">
-                        <label class="form-label small font-code text-white">Tipo de Entidad a Auditar</label>
-                        <input type="text" name="tipo_empresa" class="form-control inaus-input form-control-sm"
-                            placeholder="Ej: Empresa Minera, Constructora, SRL...">
-                    </div>
+                        <div id="field-soft" class="dynamic-field-dark mb-4 p-4"
+                            style="border-left-color: var(--gold-data); display: none;">
+                            <label class="form-label small font-code text-white">Stack o Requisito del Sistema</label>
+                            <input type="text" name="stack_software" class="form-control inaus-input form-control-sm"
+                                placeholder="Ej: Integración Python, BD MongoDB, SaaS Web...">
+                        </div>
 
-                    <div id="field-soft" class="dynamic-field-dark mb-4 p-4"
-                        style="border-left-color: var(--gold-data); display: none;">
-                        <label class="form-label small font-code text-white">Stack o Requisito del Sistema</label>
-                        <input type="text" name="stack_software" class="form-control inaus-input form-control-sm"
-                            placeholder="Ej: Integración Python, BD MongoDB, SaaS Web...">
-                    </div>
+                        <div id="field-lab" class="dynamic-field-dark mb-4 p-4"
+                            style="border-left-color: #ef4444; display: none;">
+                            <label class="form-label small font-code text-white">Dispositivo a Intervenir</label>
+                            <input type="text" name="dispositivo_lab" class="form-control inaus-input form-control-sm"
+                                placeholder="Ej: Placa Lógica Server, iPhone 17, Recuperación Data...">
+                        </div>
 
-                    <div id="field-lab" class="dynamic-field-dark mb-4 p-4"
-                        style="border-left-color: #ef4444; display: none;">
-                        <label class="form-label small font-code text-white">Dispositivo a Intervenir</label>
-                        <input type="text" name="dispositivo_lab" class="form-control inaus-input form-control-sm"
-                            placeholder="Ej: Placa Lógica Server, iPhone 17, Recuperación Data...">
-                    </div>
-
-                    <div class="mb-5 mt-4">
-                        <label class="form-label small font-code text-muted">Descripción del Requerimiento</label>
-                        <textarea name="mensaje" class="form-control inaus-input" rows="5"
-                            placeholder="Detalle la situación de su empresa o equipo..." required></textarea>
-                    </div>
-                    <div id="form-status" class="mb-4 small font-code fw-bold text-center" style="display: none;"></div>
-                    <button type="submit" id="btn-submit" class="btn btn-primary-inaus w-100 py-3 haptic-btn font-code"
-                        style="letter-spacing: 2px;">
-                        ENVIAR SOLICITUD AL SISTEMA
-                    </button>
+                        <div class="mb-5 mt-4">
+                            <label class="form-label small font-code text-muted">Descripción del Requerimiento</label>
+                            <textarea name="mensaje" class="form-control inaus-input" rows="5"
+                                placeholder="Detalle la situación de su empresa o equipo..." required></textarea>
+                        </div>
+                        
+                        <div id="form-status" class="mb-4 small font-code fw-bold text-center" style="display: none;"></div>
+                        
+                        <button type="submit" id="btn-submit" class="btn btn-primary-inaus w-100 py-3 haptic-btn font-code"
+                            style="letter-spacing: 2px;">
+                            ENVIAR SOLICITUD AL SISTEMA
+                        </button>
                     </form>
-                </div>
+                    </div>
             </div>
         </div>
     </section>
