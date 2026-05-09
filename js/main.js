@@ -1,6 +1,6 @@
 /**
  * ====================================================================
- * DBGEO TECHNOLOGIES - CORE SYSTEM SCRIPT
+ * INAUS TECHNOLOGIES - CORE SYSTEM SCRIPT
  * Arquitectura: Vanilla JS (ES6+)
  * Build: 2026.3 - PWA, Auto Dark Mode & AJAX Formspree Transmission
  * ====================================================================
@@ -8,9 +8,15 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. ANIMACIONES (AOS)
+    // 1. ANIMACIONES (AOS) - CONFIGURACIÓN BIG 4
     if (typeof AOS !== 'undefined') {
-        AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
+        AOS.init({ 
+            once: true, 
+            offset: 80, 
+            duration: 1200, /* 1.2s: Movimiento lento = Percepción de Alto Valor */
+            easing: 'cubic-bezier(0.25, 1, 0.5, 1)', /* Fricción premium */
+            delay: 100 /* Micro-pausa de suspenso */
+        });
     }
 
     // 2. NAVBAR GLASSMORPHISM
@@ -29,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: true });
     }
 
-    // 3. FIRMA TÉCNICA
-    console.log('%c DBGEO Technologies 2026 ', 'background: #071739; color: #E3C39D; font-size: 20px; font-weight: 900; padding: 10px 20px; border-radius: 5px;');
+    // 3. FIRMA TÉCNICA (Actualizada a INAUS)
+    console.log('%c INAUS Technologies 2026 ', 'background: #071739; color: #E3C39D; font-size: 20px; font-weight: 900; padding: 10px 20px; border-radius: 5px;');
     console.log('%c> Arquitectura de Sistemas & Auditoría Financiera.', 'color: #4B6382; font-size: 14px; font-weight: bold;');
 
     // 4. DARK MODE AUTOMÁTICO
@@ -88,7 +94,7 @@ const intelligentForm = document.getElementById('intelligentForm');
 
 if (intelligentForm) {
     intelligentForm.addEventListener('submit', async function (event) {
-        event.preventDefault(); // Detiene la recarga de la página
+        event.preventDefault();
 
         const statusDiv = document.getElementById('form-status');
         const btnSubmit = document.getElementById('btn-submit');
@@ -124,20 +130,20 @@ if (intelligentForm) {
         }
     });
 }
+
 // 8. MOTOR HÁPTICO (MICRO-VIBRACIÓN EN MÓVILES)
 document.addEventListener('DOMContentLoaded', () => {
     const hapticBtns = document.querySelectorAll('.haptic-btn');
 
     hapticBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // navigator.vibrate(15) genera un pulso seco de 15 milisegundos
-            // Funciona en Android para dar la sensación de un "clic" físico
             if (navigator.vibrate) {
                 navigator.vibrate(15);
             }
         });
     });
 });
+
 // 9. CYBER CURSOR & ATTENTION API (2026 TENDENCIES)
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -152,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- CYBER CURSOR SCRIPT ---
-    // Solo lo ejecutamos si estamos en PC (pantallas grandes)
     if (window.innerWidth >= 992) {
         const dot = document.createElement('div');
         dot.classList.add('cyber-dot');
@@ -169,14 +174,11 @@ document.addEventListener('DOMContentLoaded', () => {
             mouseX = e.clientX;
             mouseY = e.clientY;
 
-            // El punto sigue al mouse instantáneamente
             dot.style.left = `${mouseX}px`;
             dot.style.top = `${mouseY}px`;
         });
 
-        // Bucle de animación para que el anillo siga al punto con "retraso elástico"
         const animateRing = () => {
-            // Lerp (Linear Interpolation) para movimiento fluido
             ringX += (mouseX - ringX) * 0.2;
             ringY += (mouseY - ringY) * 0.2;
 
@@ -188,60 +190,17 @@ document.addEventListener('DOMContentLoaded', () => {
         animateRing();
     }
 });
+
 // 10. CONTROL DEL PRE-LOADER INAUS
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
 
-    // Si el preloader existe en el HTML, ejecutamos la secuencia
     if (preloader) {
         setTimeout(() => {
             preloader.classList.add('preloader-hidden');
-            // Opcional: vibración háptica al terminar de cargar (solo en móviles Android)
             if (navigator.vibrate) {
                 navigator.vibrate(20);
             }
-        }, 1500); // 1500 milisegundos = 1.5 segundos de carga
-    }
-});
-/* =========================================
-   CYBER CURSOR & ATTENTION API
-   ========================================= */
-document.addEventListener('DOMContentLoaded', () => {
-    // Solo ejecutamos el cursor personalizado en PC (pantallas grandes)
-    if (window.innerWidth >= 992) {
-        // 1. Crear los elementos en el HTML dinámicamente
-        const dot = document.createElement('div');
-        dot.classList.add('cyber-dot');
-        document.body.appendChild(dot);
-
-        const ring = document.createElement('div');
-        ring.classList.add('cyber-ring');
-        document.body.appendChild(ring);
-
-        // 2. Variables de posición
-        let mouseX = 0, mouseY = 0;
-        let ringX = 0, ringY = 0;
-
-        // 3. Capturar el movimiento real del mouse
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-
-            // El punto sigue al mouse instantáneamente
-            dot.style.left = `${mouseX}px`;
-            dot.style.top = `${mouseY}px`;
-        });
-
-        // 4. Bucle de animación para que el anillo siga al punto suavemente
-        const animateRing = () => {
-            ringX += (mouseX - ringX) * 0.2; // 0.2 es la fricción/suavidad
-            ringY += (mouseY - ringY) * 0.2;
-
-            ring.style.left = `${ringX}px`;
-            ring.style.top = `${ringY}px`;
-
-            requestAnimationFrame(animateRing);
-        };
-        animateRing();
+        }, 1500); 
     }
 });

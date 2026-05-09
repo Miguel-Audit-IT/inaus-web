@@ -2,29 +2,20 @@
    1. VARIABLES MAESTRAS (BRAND BOOK 2026 - ZERO BLUE)
    ========================================= */
 :root {
-    --navy-deep: #050505;
-    /* Obsidian Black (Fondo principal ultra oscuro) */
-    --navy-light: #121212;
-    /* Carbon Black (Para las tarjetas Bento) */
+    --navy-deep: #050505; /* Obsidian Black */
+    --navy-light: #121212; /* Carbon Black */
     --grey-pale: #F4F4F5;
-    /* Gris Zinc (Para contraste si se desactiva el Dark Mode) */
     --blue-tech: #52525B;
-    /* Titanium Grey (Para detalles metálicos, 0% azul) */
-    --gold-data: #F59E0B;
-    /* Cyber Amber (Naranja/Dorado de alto contraste) */
+    --gold-data: #F59E0B; /* Cyber Amber */
     --white: #FFFFFF;
     --grid-color: rgba(255, 255, 255, 0.03);
-    /* Grid técnica casi invisible */
     --glass-border: rgba(255, 255, 255, 0.08);
-    /* Bordes de cristal */
 }
 
 /* =========================================
    2. ESTILOS GENERALES & TIPOGRAFÍA FLUIDA
    ========================================= */
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -34,28 +25,12 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Tipografía Fluida 2026: Escala automáticamente sin media queries */
-h1 {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-}
+h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
+h4 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
 
-h2 {
-    font-size: clamp(2rem, 4vw, 3.5rem);
-}
-
-h3 {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-}
-
-h4 {
-    font-size: clamp(1.2rem, 2vw, 1.8rem);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     line-height: 1.1;
@@ -67,9 +42,7 @@ h5 {
     letter-spacing: -0.5px;
 }
 
-a {
-    text-decoration: none;
-}
+a { text-decoration: none; }
 
 /* =========================================
    3. FONDOS TÉCNICOS (DIGITAL TWIN)
@@ -84,43 +57,29 @@ a {
     position: relative;
 }
 
-/* Gradiente radial para simular "pantalla encendida" en el fondo */
 .bg-tech-grid::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     background: radial-gradient(circle at 50% 0%, rgba(227, 195, 157, 0.08) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
 }
 
 /* =========================================
-   4. BENTO GRID 2.0 (MODULARIDAD ASIMÉTRICA)
+   4. BENTO GRID 2.0
    ========================================= */
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
     grid-auto-flow: dense;
-    /* Rellena huecos automáticamente */
 }
 
-/* Clases utilitarias para crear asimetría (El verdadero Bento) */
 @media (min-width: 992px) {
-    .span-2 {
-        grid-column: span 2;
-    }
-
-    .span-3 {
-        grid-column: span 3;
-    }
-
-    .row-2 {
-        grid-row: span 2;
-    }
+    .span-2 { grid-column: span 2; }
+    .span-3 { grid-column: span 3; }
+    .row-2 { grid-row: span 2; }
 }
 
 .bento-item {
@@ -141,15 +100,12 @@ a {
     border-color: var(--glass-border);
     color: var(--white);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-    /* Brillo interior 2026 */
 }
 
-/* Efecto Hover Magnético / Resplandor */
 .bento-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 30px 60px rgba(7, 23, 57, 0.12);
     border-color: rgba(227, 195, 157, 0.5);
-    /* Borde dorado suave */
 }
 
 .bento-item.dark:hover {
@@ -158,12 +114,11 @@ a {
 }
 
 /* =========================================
-   5. NAVBAR & BOTONES (GLASSMORPHISM)
+   5. NAVBAR & BOTONES
    ========================================= */
 .navbar {
     background-color: rgba(7, 23, 57, 0.85);
     backdrop-filter: blur(20px);
-    /* Desenfoque extremo moderno */
     -webkit-backdrop-filter: blur(20px);
     padding: 1.2rem 0;
     border-bottom: 1px solid rgba(227, 195, 157, 0.15);
@@ -178,9 +133,7 @@ a {
     color: var(--white) !important;
 }
 
-.navbar-brand span {
-    color: var(--gold-data);
-}
+.navbar-brand span { color: var(--gold-data); }
 
 .nav-link {
     color: rgba(255, 255, 255, 0.6) !important;
@@ -192,18 +145,13 @@ a {
     transition: color 0.3s;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: var(--gold-data) !important;
-}
+.nav-link:hover, .nav-link.active { color: var(--gold-data) !important; }
 
-/* Botones Premium */
 .btn-primary-dbgeo {
     background: var(--gold-data);
     color: var(--navy-deep);
     font-weight: 800;
     border-radius: 12px;
-    /* Menos redondo, más tecnológico */
     padding: 14px 32px;
     border: none;
     text-transform: uppercase;
@@ -227,7 +175,6 @@ a {
     border: 1px solid rgba(227, 195, 157, 0.5);
     padding: 10px 24px;
     font-family: 'Fira Code', monospace;
-    /* Toque ingeniero en el CTA */
     transition: all 0.3s ease;
 }
 
@@ -238,7 +185,7 @@ a {
 }
 
 /* =========================================
-   6. MICRO-INTERACCIONES & COMPONENTES
+   6. MICRO-INTERACCIONES
    ========================================= */
 .tech-badge {
     background: rgba(227, 195, 157, 0.08);
@@ -255,7 +202,6 @@ a {
     backdrop-filter: blur(4px);
 }
 
-/* Indicador de Estado Latiendo */
 .status-indicator {
     display: inline-block;
     width: 10px;
@@ -268,21 +214,13 @@ a {
 }
 
 @keyframes pulse-ring {
-    0% {
-        box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.5);
-    }
-
-    70% {
-        box-shadow: 0 0 0 8px rgba(39, 201, 63, 0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(39, 201, 63, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.5); }
+    70% { box-shadow: 0 0 0 8px rgba(39, 201, 63, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(39, 201, 63, 0); }
 }
 
 /* =========================================
-   7. FOOTER CORPORATIVO
+   7. FOOTER
    ========================================= */
 footer {
     background-color: #030a1a;
@@ -305,78 +243,25 @@ footer a {
     transition: color 0.3s ease;
 }
 
-footer a:hover {
-    color: var(--gold-data);
-}
+footer a:hover { color: var(--gold-data); }
 
 /* =========================================
-   8. DARK MODE NATIVO (TENDENCIA 2026)
+   8. DARK MODE NATIVO
    ========================================= */
-[data-theme="dark"] body,
-[data-theme="dark"] .bg-pale-horizon,
-[data-theme="dark"] .bg-light {
+[data-theme="dark"] body {
     background-color: #030a1a !important;
     color: var(--grey-pale) !important;
 }
 
-[data-theme="dark"] .bento-item:not(.dark),
-[data-theme="dark"] .bg-white,
-[data-theme="dark"] .contact-info-panel,
-[data-theme="dark"] .contact-card {
-    background-color: var(--navy-light) !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-[data-theme="dark"] .bento-item:not(.dark) h1,
-[data-theme="dark"] .bento-item:not(.dark) h2,
-[data-theme="dark"] .bento-item:not(.dark) h3,
-[data-theme="dark"] .bento-item:not(.dark) h4,
-[data-theme="dark"] .bento-item:not(.dark) p,
-[data-theme="dark"] .text-muted {
-    color: rgba(255, 255, 255, 0.8) !important;
-}
-
-[data-theme="dark"] .form-control,
-[data-theme="dark"] .form-select {
-    background-color: rgba(0, 0, 0, 0.2) !important;
-    color: white !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
-}
-
 /* =========================================
-   9. TENDENCIAS 2026: SCROLL, HAPTICS & LIVE DATA
+   9. TENDENCIAS 2026 & CYBER CURSOR
    ========================================= */
-
-/* --- A. Scrollytelling Parallax --- */
-@keyframes scroll-parallax {
-    0% {
-        background-position: 0 0;
-        opacity: 1;
-    }
-
-    100% {
-        background-position: 0 400px;
-        opacity: 0.2;
-    }
-}
-
-.bg-tech-grid {
-    /* Implementación nativa 2026 (Chromium) */
-    animation: scroll-parallax linear;
-    animation-timeline: scroll(root);
-}
-
-/* --- B. Micro-Interacciones Mecánicas (Haptics) --- */
-/* Simulamos el hundimiento físico de un switch industrial */
 .haptic-btn:active {
     transform: translateY(4px) scale(0.97) !important;
     box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.6), 0 0 0 transparent !important;
     transition: all 0.05s ease !important;
 }
 
-/* --- C. Visualización de Datos en Vivo --- */
-
-/* 1. Radar Forense */
 .radar-box {
     width: 45px;
     height: 45px;
@@ -397,13 +282,8 @@ footer a:hover {
     animation: radar-spin 2s linear infinite;
 }
 
-@keyframes radar-spin {
-    100% {
-        transform: rotate(360deg);
-    }
-}
+@keyframes radar-spin { 100% { transform: rotate(360deg); } }
 
-/* 2. Consola de Código SaaS */
 .live-code-box {
     background: #000;
     padding: 10px;
@@ -425,67 +305,46 @@ footer a:hover {
 }
 
 @keyframes typing {
-
-    0%,
-    20% {
-        width: 0;
-    }
-
-    80%,
-    100% {
-        width: 100%;
-    }
+    0%, 20% { width: 0; }
+    80%, 100% { width: 100%; }
 }
 
-@keyframes blink-caret {
-    50% {
-        border-color: transparent;
-    }
-}
+@keyframes blink-caret { 50% { border-color: transparent; } }
 
-/* --- D. Cyber Cursor Personalizado --- */
+/* CSS DEL CURSOR (Corregido el error de sintaxis) */
 @media (min-width: 992px) {
+    .cyber-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--gold-data);
+        border-radius: 50%;
+        position: fixed;
+        top: 0; left: 0;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+    }
 
-    /* Oculta el mouse normal */
-}
+    .cyber-ring {
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--gold-data);
+        border-radius: 50%;
+        position: fixed;
+        top: 0; left: 0;
+        pointer-events: none;
+        z-index: 9998;
+        transform: translate(-50%, -50%);
+        transition: width 0.2s, height 0.2s, background-color 0.2s ease-out;
+    }
 
-.cyber-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--gold-data);
-    border-radius: 50%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-}
-
-.cyber-ring {
-    width: 30px;
-    height: 30px;
-    border: 1px solid var(--gold-data);
-    border-radius: 50%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, background-color 0.2s;
-    /* Suavizamos el movimiento del anillo para que "siga" al punto */
-    transition-timing-function: ease-out;
-}
-
-/* Efecto cuando pasas sobre un enlace o botón */
-a:hover~.cyber-ring,
-button:hover~.cyber-ring,
-.haptic-btn:hover~.cyber-ring {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(245, 158, 11, 0.1);
-}
+    a:hover ~ .cyber-ring,
+    button:hover ~ .cyber-ring,
+    .haptic-btn:hover ~ .cyber-ring {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(245, 158, 11, 0.1);
+    }
 }
 
 /* =========================================
@@ -493,49 +352,37 @@ button:hover~.cyber-ring,
    ========================================= */
 #preloader {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background-color: #050505;
-    /* Tu fondo Obsidian Black */
     z-index: 99999;
-    /* Por encima de todo */
     display: flex;
     justify-content: center;
     align-items: center;
     transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;
 }
 
-.loader-content {
-    text-align: center;
-}
+.loader-content { text-align: center; }
 
-/* Animación de latido para la "N" */
 .loader-logo {
     width: 160px;
-    /* Tamaño imponente pero elegante */
     margin-bottom: 30px;
     filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.15));
     animation: pulse-logo 2s infinite ease-in-out;
 }
 
 .loader-bar-container {
-    width: 200px;
-    height: 2px;
+    width: 200px; height: 2px;
     background: rgba(255, 255, 255, 0.05);
     margin: 0 auto 20px;
     position: relative;
     overflow: hidden;
 }
 
-/* La línea de escaneo dorada */
 .loader-bar {
     position: absolute;
-    width: 30%;
-    height: 100%;
+    width: 30%; height: 100%;
     background: var(--gold-data);
-    /* Tu color cyber-amber */
     animation: loading-progress 1.5s infinite ease-in-out;
 }
 
@@ -546,32 +393,16 @@ button:hover~.cyber-ring,
     opacity: 0.7;
 }
 
-/* KEYFRAMES (Motores de animación) */
 @keyframes pulse-logo {
-
-    0%,
-    100% {
-        opacity: 0.7;
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.03);
-    }
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.03); }
 }
 
 @keyframes loading-progress {
-    0% {
-        left: -30%;
-    }
-
-    100% {
-        left: 100%;
-    }
+    0% { left: -30%; }
+    100% { left: 100%; }
 }
 
-/* Clase que inyectará JS para desaparecer la pantalla */
 .preloader-hidden {
     opacity: 0;
     visibility: hidden;
@@ -585,18 +416,13 @@ button:hover~.cyber-ring,
     display: flex;
     align-items: center;
     background-color: #030303;
-    /* Aún más oscuro, casi negro puro */
     position: relative;
     overflow: hidden;
 }
 
-/* Marca de agua estilo Deloitte en el fondo */
 .bg-watermark {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     opacity: 0.03;
     background-image: radial-gradient(var(--gold-data) 1px, transparent 1px);
     background-size: 40px 40px;
@@ -605,7 +431,6 @@ button:hover~.cyber-ring,
 
 .corporate-title {
     font-weight: 300;
-    /* Letra delgada y elegante */
     letter-spacing: -1px;
     line-height: 1.1;
 }
@@ -615,7 +440,6 @@ button:hover~.cyber-ring,
     color: var(--gold-data);
 }
 
-/* El círculo futurista de la derecha */
 .futuristic-sphere-container {
     position: relative;
     width: 100%;
@@ -626,8 +450,7 @@ button:hover~.cyber-ring,
 }
 
 .futuristic-sphere {
-    width: 80%;
-    height: 80%;
+    width: 80%; height: 80%;
     border-radius: 50%;
     background: radial-gradient(circle at 30% 30%, rgba(245, 158, 11, 0.1), transparent 70%);
     box-shadow: inset 0 0 50px rgba(245, 158, 11, 0.2), 0 0 100px rgba(245, 158, 11, 0.1);
@@ -638,64 +461,39 @@ button:hover~.cyber-ring,
 .futuristic-sphere::before {
     content: '';
     position: absolute;
-    top: -5%;
-    left: -5%;
-    right: -5%;
-    bottom: -5%;
+    top: -5%; left: -5%; right: -5%; bottom: -5%;
     border: 1px dashed rgba(245, 158, 11, 0.3);
     border-radius: 50%;
     animation: spin-slow 20s linear infinite;
 }
 
-/* Secciones fluidas (sin cajas) */
 .fluid-section {
     padding: 120px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-@keyframes spin-slow {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
+@keyframes spin-slow { 100% { transform: rotate(360deg); } }
 @keyframes float-sphere {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
 }
 
 /* =========================================
-   12. MEGA MENÚ CORPORATIVO (ESTILO DELOITTE)
+   12. MEGA MENÚ CORPORATIVO
    ========================================= */
-/* Obligamos al contenedor a ser estático para que el submenú tome el 100% del ancho de la pantalla */
-.navbar .has-megamenu {
-    position: static !important;
-}
+.navbar .has-megamenu { position: static !important; }
 
 .navbar .megamenu {
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin-top: 0;
-    padding: 0;
+    left: 0; right: 0; width: 100%;
+    margin-top: 0; padding: 0;
     background-color: #050505;
-    /* Fondo negro absoluto */
     border: none;
     border-top: 2px solid var(--gold-data);
-    /* Línea dorada superior de separación */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
     border-radius: 0;
 }
 
-/* La barra lateral izquierda dentro del menú */
 .megamenu-sidebar {
     background-color: #0a0a0a;
     padding: 30px;
@@ -703,17 +501,13 @@ button:hover~.cyber-ring,
     border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.megamenu-content {
-    padding: 40px;
-}
+.megamenu-content { padding: 40px; }
 
-/* Enlaces dentro del Mega Menú */
 .mega-link {
     display: block;
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.95rem;
     padding: 10px 0;
-    text-decoration: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
 }
@@ -724,7 +518,6 @@ button:hover~.cyber-ring,
     border-bottom-color: rgba(245, 158, 11, 0.3);
 }
 
-/* Títulos dentro del menú */
 .mega-title {
     color: var(--white);
     font-family: 'Montserrat', sans-serif;
@@ -733,7 +526,6 @@ button:hover~.cyber-ring,
     margin-bottom: 20px;
 }
 
-/* Tarjeta destacada (Para noticias o productos futuros) */
 .mega-featured-card {
     background: #111;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -743,41 +535,115 @@ button:hover~.cyber-ring,
     transition: border-color 0.3s ease;
 }
 
-.mega-featured-card:hover {
-    border-color: var(--gold-data);
-}
+.mega-featured-card:hover { border-color: var(--gold-data); }
 
-/* =========================================
-   13. OPTIMIZACIÓN MÓVIL (SMARTPHONES)
-   ========================================= */
 @media (max-width: 991px) {
-
-    /* Ajuste del Mega Menú para que no se desborde en celulares */
     .navbar .megamenu {
-        border: none;
-        box-shadow: none;
         background-color: #030303;
         margin-top: 10px;
     }
-
     .megamenu-sidebar {
         min-height: auto;
         padding: 20px;
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
+    .megamenu-content { padding: 20px; }
+    .corporate-title { font-size: 2.5rem !important; }
+    .fluid-section { padding: 60px 0; }
+}
 
-    .megamenu-content {
-        padding: 20px;
-    }
+/* ==========================================
+   13. INAUS PREMIUM IMAGE FILTER
+   ========================================== */
+.img-inaus-premium {
+    filter: grayscale(80%) contrast(120%) brightness(70%);
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.9);
+    border-radius: 8px;
+}
 
-    /* Ajuste de tipografía en celulares para que no se salga de la pantalla */
-    .corporate-title {
-        font-size: 2.5rem !important;
-    }
+.img-inaus-premium:hover {
+    filter: grayscale(30%) contrast(110%) brightness(100%);
+    box-shadow: 0 20px 40px rgba(227, 195, 157, 0.15);
+    transform: translateY(-5px);
+}
 
-    /* Reducimos el padding de las secciones en móvil */
-    .fluid-section {
-        padding: 60px 0;
-    }
+/* ==========================================
+   14. TICKER DE CONFIANZA CORPORATIVA (MARQUEE)
+   ========================================== */
+.trust-ticker-wrapper {
+    background-color: #030303;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    padding: 2rem 0;
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.trust-ticker-wrapper::before,
+.trust-ticker-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.trust-ticker-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #030303 0%, transparent 100%);
+}
+
+.trust-ticker-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #030303 0%, transparent 100%);
+}
+
+.trust-ticker-track {
+    display: inline-flex;
+    align-items: center;
+    animation: scrollTicker 40s linear infinite;
+}
+
+.trust-ticker-wrapper:hover .trust-ticker-track {
+    animation-play-state: paused;
+}
+
+.trust-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 50px;
+    color: rgba(255, 255, 255, 0.45);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.trust-item:hover {
+    color: var(--gold-data);
+    transform: scale(1.05);
+}
+
+.trust-item i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    opacity: 0.8;
+}
+
+@keyframes scrollTicker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
