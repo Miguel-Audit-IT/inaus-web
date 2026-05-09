@@ -82,12 +82,12 @@
         }
     </style>
 
+    <!-- Google tag (gtag.js) - INAUS Telemetry -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CMP6FFY3T"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-5CMP6FFY3T');
     </script>
 </head>
@@ -104,15 +104,13 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
-        style="background-color: rgba(3, 3, 3, 0.98); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <!-- EL MENÚ DEFINITIVO (SINCRONIZADO) -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2" style="background-color: rgba(3, 3, 3, 0.98); border-bottom: 1px solid rgba(255,255,255,0.05);">
         <div class="container-fluid px-lg-5">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="img/logo-inaus.png" alt="INAUS Technologies" height="65" class="me-3"
-                    style="filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5)); transform: translateY(-2px);">
+                <img src="img/logo-inaus.png" alt="INAUS Technologies" height="95" class="me-3" style="filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5)); transform: translateY(-2px);">
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#megaNavbar">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#megaNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="megaNavbar">
@@ -124,36 +122,43 @@
                                 <div class="col-lg-3 megamenu-sidebar">
                                     <h5 class="mega-title">Conoce INAUS</h5>
                                     <a href="nosotros.html" class="mega-link">Directorio Ejecutivo</a>
-                                    <a href="nosotros.html#proposito" class="mega-link">Propósito y Valores</a>
-                                    <a href="nosotros.html#nodos" class="mega-link">Nodos Operativos (Bolivia-Chile)</a>
-                                    <a href="contacto.html" class="mega-link">Contacto Corporativo</a>
+                                    <a href="nodos.html" class="mega-link">Nodos Operativos (Bolivia-Chile)</a>
+                                    <a href="legales.html" class="mega-link">Gobernanza & Legal</a>
                                 </div>
                                 <div class="col-lg-9 megamenu-content">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h5 class="mega-title text-gold font-code mb-4">LIDERAZGO</h5>
-                                            <p class="opacity-75 mb-4">"El Auditor que programa el futuro." Conoce la
-                                                visión arquitectónica de Miguel Jorge.</p>
-                                        </div>
-                                    </div>
+                                    <h5 class="mega-title text-gold font-code mb-4">LIDERAZGO</h5>
+                                    <p class="text-white opacity-75 mb-4">"El Auditor que programa el futuro." Conoce la visión arquitectónica de Miguel Jorge.</p>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="nav-item dropdown has-megamenu">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Servicios</a>
+                        <a class="nav-link dropdown-toggle text-gold" href="#" data-bs-toggle="dropdown">Servicios</a>
                         <div class="dropdown-menu megamenu shadow-lg" role="menu">
                             <div class="row g-0">
                                 <div class="col-lg-3 megamenu-sidebar">
                                     <h5 class="mega-title text-gold">Áreas de Especialidad</h5>
-                                    <a href="auditoria.html" class="mega-link">Auditoría 4.0 & Forense</a>
+                                    <a href="auditoria.html" class="mega-link text-white">Auditoría 4.0 & Forense <i class="fa-solid fa-chevron-right ms-2" style="font-size: 0.7rem;"></i></a>
                                     <a href="informatica.html" class="mega-link">Sistemas Multicloud</a>
                                     <a href="laboratorio.html" class="mega-link">Hardware Sandbox</a>
                                 </div>
                                 <div class="col-lg-9 megamenu-content">
-                                    <h5 class="mega-title text-gold font-code mb-4">SOLUCIONES INTEGRALES</h5>
-                                    <p class="opacity-75">Integramos la Fe Pública contable con infraestructura de
-                                        desarrollo avanzada.</p>
+                                    <div class="row g-4">
+                                        <div class="col-md-6">
+                                            <div class="mega-featured-card d-flex flex-column" style="border-color: var(--gold-data);">
+                                                <i class="fa-solid fa-file-invoice-dollar fa-2x text-gold mb-3"></i>
+                                                <h6 class="text-white">División Activa: Compliance & Tax</h6>
+                                                <p class="small text-white opacity-75 mb-0 mt-2">Validación de estados financieros binacionales.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mega-featured-card d-flex flex-column">
+                                                <i class="fa-brands fa-python fa-2x text-gold mb-3"></i>
+                                                <h6 class="text-white">Desarrollo SaaS In-house</h6>
+                                                <p class="small text-white opacity-75 mb-0 mt-2">Motores contables propietarios desarrollados en Python y MongoDB.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -163,35 +168,55 @@
                         <div class="dropdown-menu megamenu shadow-lg" role="menu">
                             <div class="row g-0">
                                 <div class="col-lg-3 megamenu-sidebar">
-                                    <h5 class="mega-title">Actualidad</h5>
-                                    <a href="javascript:void(0);" class="mega-link">Reformas Tributarias (Chile)</a>
-                                    <a href="javascript:void(0);" class="mega-link">Normativas Financieras (Bolivia)</a>
+                                    <h5 class="mega-title">Publicaciones</h5>
+                                    <a href="perspectivas.html" class="mega-link">El Fin del Muestreo (IA)</a>
                                 </div>
                                 <div class="col-lg-9 megamenu-content">
-                                    <h5 class="mega-title text-gold font-code mb-4">ÚLTIMO BOLETÍN FISCAL</h5>
-                                    <p class="opacity-75">Impacto de la IA en Auditoría Minera.</p>
+                                    <h4 class="text-white mb-3">Impacto de la IA en la Auditoría de la Industria Minera</h4>
+                                    <a href="perspectivas.html" class="btn btn-sm btn-outline-light font-code">LEER INFORME</a>
                                 </div>
                             </div>
                         </div>
                     </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle text-gold" href="#" data-bs-toggle="dropdown"><i class="fa-solid fa-store me-1"></i> Store</a>
+                        <div class="dropdown-menu megamenu shadow-lg" role="menu">
+                            <div class="row g-0">
+                                <div class="col-lg-3 megamenu-sidebar">
+                                    <h5 class="mega-title text-gold">Tienda Hardware</h5>
+                                    <span class="mega-link text-muted" style="cursor: not-allowed;">Equipos Apple (Próximamente)</span>
+                                    <span class="mega-link text-muted" style="cursor: not-allowed;">Workstations (Próximamente)</span>
+                                </div>
+                                <div class="col-lg-9 megamenu-content">
+                                    <div class="d-flex align-items-center h-100 p-4 border border-secondary rounded" style="background: rgba(245, 158, 11, 0.05);">
+                                        <div>
+                                            <span class="tech-tag bg-dark text-white border-secondary mb-3">FASE DE DESPLIEGUE</span>
+                                            <h4 class="text-white">INAUS Premium Store</h4>
+                                            <p class="text-white opacity-75 mb-0">La plataforma de distribución de hardware de élite y dispositivos móviles está en construcción.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item d-flex align-items-center ms-lg-2">
+                        <a class="nav-link font-code text-white" href="academia.html"><i class="fa-solid fa-graduation-cap text-gold me-1"></i> ACADEMY</a>
+                    </li>
                     <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
-                        <a href="contacto.html" class="btn btn-nav-cta haptic-btn"
-                            style="background-color: var(--gold-data); color: #000;"><span class="status-dot"
-                                style="background-color: #000; box-shadow: none;"></span>PORTAL CLIENTES</a>
+                        <a href="contacto.html" class="btn btn-nav-cta haptic-btn"><span class="status-dot"></span>PORTAL CLIENTES</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- FIN DEL MENÚ DEFINITIVO -->
 
     <header class="hero-corporate text-center" style="padding: 200px 0 150px; background-color: #030303;">
         <div class="bg-watermark"></div>
         <div class="container position-relative" style="z-index: 2;" data-aos="fade-up">
-            <h1 class="display-3 corporate-title text-white mb-3">Centro de <strong
-                    class="text-gold">Comunicaciones</strong></h1>
+            <h1 class="display-3 corporate-title text-white mb-3">Centro de <strong class="text-gold">Comunicaciones</strong></h1>
             <p class="lead opacity-75 font-code mx-auto" style="max-width: 700px; font-size: 0.95rem;">
-                Inicie un ticket de servicio. La consulta inicial y evaluación de requerimientos no tiene costo
-                asociado.
+                Inicie un ticket de servicio. La consulta inicial y evaluación de requerimientos no tiene costo asociado.
             </p>
         </div>
     </header>
@@ -202,149 +227,82 @@
                 <div class="col-lg-4 contact-info-panel d-flex flex-column justify-content-between">
                     <div>
                         <h3 class="mb-4 corporate-title">Operaciones <strong>Hub</strong></h3>
-                        <p class="small opacity-75 mb-5">Atención especializada para industrias críticas, desarrollo de
-                            software y auditoría contable.</p>
+                        <p class="small opacity-75 mb-5">Atención especializada para industrias críticas, desarrollo de software y auditoría contable.</p>
 
                         <div class="mb-5">
-                            <h6 class="font-code text-gold mb-3" style="font-size: 0.75rem; letter-spacing: 2px;">/
-                                UBICACIONES</h6>
-                            <p class="small mb-2 opacity-75"><i
-                                    class="fa-solid fa-location-dot fa-xs me-2 text-gold"></i>Bolivia: La Paz <br><span
-                                    class="ms-3 text-muted" style="font-size: 0.7rem;">(División Auditoría &
-                                    NIIF)</span></p>
-                            <p class="small opacity-75"><i
-                                    class="fa-solid fa-location-dot fa-xs me-2 text-gold"></i>Chile: Calama &
-                                Antofagasta <br><span class="ms-3 text-muted" style="font-size: 0.7rem;">(División
-                                    Sistemas & Hardware)</span></p>
+                            <h6 class="font-code text-gold mb-3" style="font-size: 0.75rem; letter-spacing: 2px;">/ UBICACIONES</h6>
+                            <p class="small mb-2 opacity-75"><i class="fa-solid fa-location-dot fa-xs me-2 text-gold"></i>Bolivia: La Paz <br><span class="ms-3 text-muted" style="font-size: 0.7rem;">(División Auditoría & NIIF)</span></p>
+                            <p class="small opacity-75"><i class="fa-solid fa-location-dot fa-xs me-2 text-gold"></i>Chile: Calama & Antofagasta <br><span class="ms-3 text-muted" style="font-size: 0.7rem;">(División Sistemas & Hardware)</span></p>
                         </div>
 
                         <div class="mb-4">
-                            <h6 class="font-code text-gold mb-3" style="font-size: 0.75rem; letter-spacing: 2px;">/
-                                LÍNEAS DIRECTAS</h6>
-                            <a href="https://wa.me/59167076448" target="_blank"
-                                class="d-block text-white small mb-3 text-decoration-none opacity-75 hover-opacity-100"><i
-                                    class="fa-brands fa-whatsapp text-success me-2"></i> Bolivia: +591 6707 6448</a>
-                            <a href="https://wa.me/56926244266" target="_blank"
-                                class="d-block text-white small mb-3 text-decoration-none opacity-75 hover-opacity-100"><i
-                                    class="fa-brands fa-whatsapp text-success me-2"></i> Chile: +56 9 2624 4266</a>
-                            <a href="mailto:miguelaud.inf@gmail.com"
-                                class="d-block text-white small text-decoration-none opacity-75 hover-opacity-100"><i
-                                    class="fa-solid fa-envelope me-2"></i> miguelaud.inf@gmail.com</a>
+                            <h6 class="font-code text-gold mb-3" style="font-size: 0.75rem; letter-spacing: 2px;">/ LÍNEAS DIRECTAS</h6>
+                            <a href="https://wa.me/59167076448" target="_blank" class="d-block text-white small mb-3 text-decoration-none opacity-75 hover-opacity-100"><i class="fa-brands fa-whatsapp text-success me-2"></i> Bolivia: +591 6707 6448</a>
+                            <a href="https://wa.me/56926244266" target="_blank" class="d-block text-white small mb-3 text-decoration-none opacity-75 hover-opacity-100"><i class="fa-brands fa-whatsapp text-success me-2"></i> Chile: +56 9 2624 4266</a>
+                            <a href="mailto:miguelaud.inf@gmail.com" class="d-block text-white small text-decoration-none opacity-75 hover-opacity-100"><i class="fa-solid fa-envelope me-2"></i> miguelaud.inf@gmail.com</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-8 p-5">
                     <form id="intelligentForm" action="https://formspree.io/f/xnjwdbjp" method="POST">
-                        
                         <input type="text" name="_gotcha" style="display:none" />
 
                         <div class="row g-4 mb-4">
                             <div class="col-md-6">
                                 <label class="form-label small font-code text-muted">Nombre del Responsable</label>
-                                <input type="text" name="nombre" class="form-control inaus-input"
-                                    placeholder="Ej. Juan Pérez" required>
+                                <input type="text" name="nombre" class="form-control inaus-input" placeholder="Ej. Juan Pérez" required>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label small font-code text-muted">Email Corporativo</label>
-                                <input type="email" name="email" class="form-control inaus-input"
-                                    placeholder="correo@empresa.com" required>
+                                <input type="email" name="email" class="form-control inaus-input" placeholder="correo@empresa.com" required>
                             </div>
                         </div>
 
                         <div class="mb-4">
                             <label class="form-label small font-code text-muted">Requerimiento a Entidad</label>
-                            <select class="form-select inaus-input fw-bold" name="departamento" id="departmentSelect"
-                                onchange="toggleDynamicFields()" required style="cursor: pointer;">
+                            <select class="form-select inaus-input fw-bold" name="departamento" id="departmentSelect" onchange="toggleDynamicFields()" required style="cursor: pointer;">
                                 <option value="" selected disabled>Seleccione la división de INAUS...</option>
                                 <option value="auditoria">INAUS Audit: Bolivia (Auditoría Fiscal & NIIF)</option>
                                 <option value="software">INAUS Tech: Desarrollo de Software (Multicloud/SaaS)</option>
-                                <option value="laboratorio">INAUS Tech: Laboratorio Chile (Recuperación Hardware)
-                                </option>
+                                <option value="laboratorio">INAUS Tech: Laboratorio Chile (Recuperación Hardware)</option>
                             </select>
                         </div>
 
-                        <div id="field-audit" class="dynamic-field-dark mb-4 p-4"
-                            style="border-left-color: #3b82f6; display: none;">
+                        <div id="field-audit" class="dynamic-field-dark mb-4 p-4" style="border-left-color: #3b82f6; display: none;">
                             <label class="form-label small font-code text-white">Tipo de Entidad a Auditar</label>
-                            <input type="text" name="tipo_empresa" class="form-control inaus-input form-control-sm"
-                                placeholder="Ej: Empresa Minera, Constructora, SRL...">
+                            <input type="text" name="tipo_empresa" class="form-control inaus-input form-control-sm" placeholder="Ej: Empresa Minera, Constructora, SRL...">
                         </div>
 
-                        <div id="field-soft" class="dynamic-field-dark mb-4 p-4"
-                            style="border-left-color: var(--gold-data); display: none;">
+                        <div id="field-soft" class="dynamic-field-dark mb-4 p-4" style="border-left-color: var(--gold-data); display: none;">
                             <label class="form-label small font-code text-white">Stack o Requisito del Sistema</label>
-                            <input type="text" name="stack_software" class="form-control inaus-input form-control-sm"
-                                placeholder="Ej: Integración Python, BD MongoDB, SaaS Web...">
+                            <input type="text" name="stack_software" class="form-control inaus-input form-control-sm" placeholder="Ej: Integración Python, BD MongoDB, SaaS Web...">
                         </div>
 
-                        <div id="field-lab" class="dynamic-field-dark mb-4 p-4"
-                            style="border-left-color: #ef4444; display: none;">
+                        <div id="field-lab" class="dynamic-field-dark mb-4 p-4" style="border-left-color: #ef4444; display: none;">
                             <label class="form-label small font-code text-white">Dispositivo a Intervenir</label>
-                            <input type="text" name="dispositivo_lab" class="form-control inaus-input form-control-sm"
-                                placeholder="Ej: Placa Lógica Server, iPhone 17, Recuperación Data...">
+                            <input type="text" name="dispositivo_lab" class="form-control inaus-input form-control-sm" placeholder="Ej: Placa Lógica Server, iPhone 17, Recuperación Data...">
                         </div>
 
                         <div class="mb-5 mt-4">
                             <label class="form-label small font-code text-muted">Descripción del Requerimiento</label>
-                            <textarea name="mensaje" class="form-control inaus-input" rows="5"
-                                placeholder="Detalle la situación de su empresa o equipo..." required></textarea>
+                            <textarea name="mensaje" class="form-control inaus-input" rows="5" placeholder="Detalle la situación de su empresa o equipo..." required></textarea>
                         </div>
                         
                         <div id="form-status" class="mb-4 small font-code fw-bold text-center" style="display: none;"></div>
                         
-                        <button type="submit" id="btn-submit" class="btn btn-primary-inaus w-100 py-3 haptic-btn font-code"
-                            style="letter-spacing: 2px;">
+                        <button type="submit" id="btn-submit" class="btn btn-primary-inaus w-100 py-3 haptic-btn font-code" style="letter-spacing: 2px;">
                             ENVIAR SOLICITUD AL SISTEMA
                         </button>
                     </form>
-                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="text-center py-4 border-top border-secondary small font-code" style="opacity: 0.4;">
         <div class="container">
-            <div class="row pt-5 pb-4 border-top border-secondary">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5><span class="status-dot"></span> INAUS TECHNOLOGIES</h5>
-                    <p class="small mb-3 opacity-75">Ecosistema integral de Auditoría Colegiada, Ingeniería de Software
-                        y Hardware Avanzado.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="https://github.com/Miguel-Audit-IT" target="_blank"
-                            class="text-white opacity-75 hover-opacity-100"><i
-                                class="fa-brands fa-github fa-2x"></i></a>
-                        <a href="https://www.facebook.com/share/14Up2mfVqqa/" target="_blank"
-                            class="text-white opacity-75 hover-opacity-100"><i
-                                class="fa-brands fa-facebook fa-2x"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5>Nodos Operativos</h5>
-                    <ul class="list-unstyled small opacity-75">
-                        <li class="mb-2"><i class="fa-solid fa-location-dot text-warning me-2"></i> <strong>Sede
-                                Central:</strong> La Paz, Bolivia</li>
-                        <li class="mb-2"><i class="fa-solid fa-location-dot text-warning me-2"></i> <strong>Sede
-                                Industrial:</strong> Calama - Antofagasta, Chile</li>
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <h5>Terminal de Contacto</h5>
-                    <ul class="list-unstyled small font-code opacity-75">
-                        <li class="mb-2"><a href="https://wa.me/59167076448" target="_blank"
-                                class="d-block text-white text-decoration-none hover-opacity-100"><i
-                                    class="fa-brands fa-whatsapp text-success me-2"></i>Bolivia: +591 6707 6448</a></li>
-                        <li class="mb-2"><a href="https://wa.me/56926244266" target="_blank"
-                                class="d-block text-white text-decoration-none hover-opacity-100"><i
-                                    class="fa-brands fa-whatsapp text-success me-2"></i>Chile: +56 9 2624 4266</a></li>
-                        <li class="mt-3"><i class="fa-solid fa-envelope text-muted me-2"></i>miguelaud.inf@gmail.com
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center pt-4 pb-4 border-top border-secondary small font-code" style="opacity: 0.4;">
-                &copy; 2026 INAUS Ecosystem. Todos los derechos reservados.
-            </div>
+            &copy; 2026 INAUS Ecosystem. Todos los derechos reservados.
         </div>
     </footer>
 
@@ -352,7 +310,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
     <script>
-        AOS.init(); // Inicializar animaciones en contacto
+        AOS.init();
 
         function toggleDynamicFields() {
             document.getElementById('field-audit').style.display = 'none';
@@ -368,16 +326,14 @@
                 document.getElementById('field-lab').style.display = 'block';
             }
         }
-    </script>
-    <script>
+
         const form = document.getElementById("intelligentForm");
         const status = document.getElementById("form-status");
         const btnSubmit = document.getElementById("btn-submit");
 
         form.addEventListener("submit", async function (event) {
-            event.preventDefault(); // Evita que la página recargue o cambie de pestaña
+            event.preventDefault(); 
 
-            // Estado de carga
             btnSubmit.innerHTML = "PROCESANDO_CONEXIÓN...";
             btnSubmit.disabled = true;
             btnSubmit.style.opacity = "0.7";
@@ -387,15 +343,13 @@
             fetch(event.target.action, {
                 method: form.method,
                 body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             }).then(response => {
                 if (response.ok) {
                     status.innerHTML = "<span class='text-success'><i class='fa-solid fa-check-circle me-2'></i>[+] SOLICITUD ENVIADA CON ÉXITO. EL SISTEMA PROCESARÁ SU REQUERIMIENTO.</span>";
                     status.style.display = "block";
-                    form.reset(); // Limpia los campos
-                    toggleDynamicFields(); // Oculta los campos dinámicos
+                    form.reset(); 
+                    toggleDynamicFields(); 
                 } else {
                     status.innerHTML = "<span class='text-warning'><i class='fa-solid fa-triangle-exclamation me-2'></i>[-] ERROR DE AUTENTICACIÓN. INTENTE NUEVAMENTE.</span>";
                     status.style.display = "block";
@@ -404,14 +358,12 @@
                 status.innerHTML = "<span class='text-danger'><i class='fa-solid fa-satellite-dish me-2'></i>[-] FALLO DE RED. REVISE SU CONEXIÓN.</span>";
                 status.style.display = "block";
             }).finally(() => {
-                // Restaura el botón después de 2 segundos
                 setTimeout(() => {
                     btnSubmit.innerHTML = "ENVIAR SOLICITUD AL SISTEMA";
                     btnSubmit.disabled = false;
                     btnSubmit.style.opacity = "1";
                 }, 2000);
 
-                // Oculta el mensaje después de 7 segundos
                 setTimeout(() => {
                     status.style.display = "none";
                 }, 7000);
@@ -419,5 +371,4 @@
         });
     </script>
 </body>
-
 </html>

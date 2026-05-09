@@ -1,16 +1,33 @@
 {
-    "name": "DBGEO Technologies",
-    "short_name": "DBGEO",
-    "start_url": "/index.html",
-    "display": "standalone",
-    "background_color": "#071739",
-    "theme_color": "#E3C39D",
-    "description": "Firma de Auditoría Financiera e Ingeniería de Sistemas",
-    "icons": [
-        {
-            "src": "img/favicon.ico",
-            "sizes": "192x192",
-            "type": "image/x-icon"
-        }
-    ]
+  "name": "INAUS Technologies | Arquitectura & Data",
+  "short_name": "INAUS Tech",
+  "description": "Firma de consultoría binacional. Auditoría 4.0, Multicloud y Hardware avanzado.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#030303",
+  "theme_color": "#030303",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "img/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "img/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo-inaus.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }

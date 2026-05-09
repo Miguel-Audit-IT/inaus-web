@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INAUS Academy | Educación Ejecutiva</title>
+    <meta name="description" content="Programas de especialización técnica: Auditoría Financiera, Multicloud y Hardware.">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Fira+Code:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Google tag (gtag.js) - INAUS Telemetry -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CMP6FFY3T"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -21,53 +24,182 @@
 
 <body style="background-color: #030303; color: white;">
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(3, 3, 3, 0.98); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <div id="preloader">
+        <div class="loader-content">
+            <img src="img/logo-inaus.png" alt="INAUS Logo" class="loader-logo">
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+            <div class="loader-text font-code">INITIALIZING_ACADEMY_MODULE...</div>
+        </div>
+    </div>
+
+    <!-- EL MENÚ DEFINITIVO (SINCRONIZADO) -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2" style="background-color: rgba(3, 3, 3, 0.98); border-bottom: 1px solid rgba(255,255,255,0.05);">
         <div class="container-fluid px-lg-5">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="img/logo-inaus.png" alt="INAUS" height="65">
+                <img src="img/logo-inaus.png" alt="INAUS Technologies" height="95" class="me-3" style="filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5)); transform: translateY(-2px);">
             </a>
-            <div class="ms-auto">
-                <a href="index.html" class="btn btn-outline-light btn-sm font-code"><i class="fa-solid fa-arrow-left me-2"></i>VOLVER A INICIO</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#megaNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="megaNavbar">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Nuestra Firma</a>
+                        <div class="dropdown-menu megamenu shadow-lg" role="menu">
+                            <div class="row g-0">
+                                <div class="col-lg-3 megamenu-sidebar">
+                                    <h5 class="mega-title">Conoce INAUS</h5>
+                                    <a href="nosotros.html" class="mega-link">Directorio Ejecutivo</a>
+                                    <a href="nodos.html" class="mega-link">Nodos Operativos (Bolivia-Chile)</a>
+                                    <a href="legales.html" class="mega-link">Gobernanza & Legal</a>
+                                </div>
+                                <div class="col-lg-9 megamenu-content">
+                                    <h5 class="mega-title text-gold font-code mb-4">LIDERAZGO</h5>
+                                    <p class="text-white opacity-75 mb-4">"El Auditor que programa el futuro." Conoce la visión arquitectónica de Miguel Jorge.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle text-gold" href="#" data-bs-toggle="dropdown">Servicios</a>
+                        <div class="dropdown-menu megamenu shadow-lg" role="menu">
+                            <div class="row g-0">
+                                <div class="col-lg-3 megamenu-sidebar">
+                                    <h5 class="mega-title text-gold">Áreas de Especialidad</h5>
+                                    <a href="auditoria.html" class="mega-link">Auditoría 4.0 & Forense</a>
+                                    <a href="informatica.html" class="mega-link">Sistemas Multicloud</a>
+                                    <a href="laboratorio.html" class="mega-link">Hardware Sandbox</a>
+                                </div>
+                                <div class="col-lg-9 megamenu-content">
+                                    <div class="row g-4">
+                                        <div class="col-md-6">
+                                            <div class="mega-featured-card d-flex flex-column" style="border-color: var(--gold-data);">
+                                                <i class="fa-solid fa-file-invoice-dollar fa-2x text-gold mb-3"></i>
+                                                <h6 class="text-white">División Activa: Compliance & Tax</h6>
+                                                <p class="small text-white opacity-75 mb-0 mt-2">Validación de estados financieros binacionales.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mega-featured-card d-flex flex-column">
+                                                <i class="fa-brands fa-python fa-2x text-gold mb-3"></i>
+                                                <h6 class="text-white">Desarrollo SaaS In-house</h6>
+                                                <p class="small text-white opacity-75 mb-0 mt-2">Motores contables propietarios desarrollados en Python y MongoDB.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Perspectivas</a>
+                        <div class="dropdown-menu megamenu shadow-lg" role="menu">
+                            <div class="row g-0">
+                                <div class="col-lg-3 megamenu-sidebar">
+                                    <h5 class="mega-title">Publicaciones</h5>
+                                    <a href="perspectivas.html" class="mega-link">El Fin del Muestreo (IA)</a>
+                                </div>
+                                <div class="col-lg-9 megamenu-content">
+                                    <h4 class="text-white mb-3">Impacto de la IA en la Auditoría de la Industria Minera</h4>
+                                    <a href="perspectivas.html" class="btn btn-sm btn-outline-light font-code">LEER INFORME</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle text-gold" href="#" data-bs-toggle="dropdown"><i class="fa-solid fa-store me-1"></i> Store</a>
+                        <div class="dropdown-menu megamenu shadow-lg" role="menu">
+                            <div class="row g-0">
+                                <div class="col-lg-3 megamenu-sidebar">
+                                    <h5 class="mega-title text-gold">Tienda Hardware</h5>
+                                    <span class="mega-link text-muted" style="cursor: not-allowed;">Equipos Apple (Próximamente)</span>
+                                    <span class="mega-link text-muted" style="cursor: not-allowed;">Workstations (Próximamente)</span>
+                                </div>
+                                <div class="col-lg-9 megamenu-content">
+                                    <div class="d-flex align-items-center h-100 p-4 border border-secondary rounded" style="background: rgba(245, 158, 11, 0.05);">
+                                        <div>
+                                            <span class="tech-tag bg-dark text-white border-secondary mb-3">FASE DE DESPLIEGUE</span>
+                                            <h4 class="text-white">INAUS Premium Store</h4>
+                                            <p class="text-white opacity-75 mb-0">La plataforma de distribución de hardware de élite y dispositivos móviles está en construcción.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item d-flex align-items-center ms-lg-2">
+                        <a class="nav-link font-code text-white" href="academia.html"><i class="fa-solid fa-graduation-cap text-gold me-1"></i> ACADEMY</a>
+                    </li>
+                    <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
+                        <a href="contacto.html" class="btn btn-nav-cta haptic-btn"><span class="status-dot"></span>PORTAL CLIENTES</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
+    <!-- FIN DEL MENÚ DEFINITIVO -->
 
-    <main style="padding-top: 120px; padding-bottom: 80px; min-height: 80vh;">
+    <!-- HEADER DE ACADEMY -->
+    <header class="text-center" style="padding-top: 180px; padding-bottom: 60px; background-color: #050505; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="container" data-aos="fade-up">
+            <span class="badge bg-dark text-gold border border-warning font-code mb-3 px-3 py-2">ADMISIÓN 2026</span>
+            <h1 class="corporate-title display-4">INAUS <strong>Academy</strong></h1>
+            <p class="lead opacity-75 mx-auto mt-3" style="max-width: 700px;">
+                Educación Ejecutiva High-Ticket. Formamos a los profesionales que liderarán la integración entre el cumplimiento normativo financiero y las arquitecturas de software avanzado.
+            </p>
+        </div>
+    </header>
+
+    <!-- PROGRAMAS AVANZADOS -->
+    <main style="padding-top: 60px; padding-bottom: 80px; background-color: #030303;">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="badge bg-warning text-dark font-code mb-3 px-3 py-2">FASE DE DESPLIEGUE</span>
-                <h1 class="corporate-title display-4">INAUS <strong>Academy</strong></h1>
-                <p class="opacity-75 mx-auto mt-3" style="max-width: 600px;">
-                    Nuestra plataforma de transferencia de conocimiento está en construcción. Próximamente abriremos cupos para nuestros programas de especialización técnica y ejecutiva.
-                </p>
-            </div>
+            <h6 class="text-gold font-code mb-5 text-center" data-aos="fade-up">// BOOTCAMPS DE ESPECIALIZACIÓN</h6>
+            
+            <div class="row g-5">
+                <!-- CURSO 1: AUDITORÍA -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="p-5 rounded border border-secondary h-100 d-flex flex-column" style="background: #080808;">
+                        <i class="fa-solid fa-scale-balanced fa-3x text-gold mb-4"></i>
+                        <h4 class="text-white mb-3">Auditoría Forense & NIIF Analytics</h4>
+                        <p class="small opacity-50 mb-4">Para Gerentes de Finanzas (CFOs) y Auditores que buscan dominar la convergencia NIIF en grupos corporativos y operar sobre bases de datos masivas (NIA 315/600).</p>
+                        
+                        <div class="mt-auto border-top border-secondary pt-4">
+                            <p class="text-warning small font-code mb-2">>> POSTULACIÓN ABIERTA</p>
+                            <a href="https://wa.me/59167076448?text=Hola%20INAUS%2C%20solicito%20entrevista%20de%20admisión%20para%20el%20Bootcamp%20Auditoría%20Forense%20y%20NIIF." target="_blank" class="btn btn-outline-light w-100 font-code">APLICAR AL PROGRAMA</a>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="row g-4 mt-4">
-                <div class="col-lg-4">
-                    <div class="p-4 rounded border border-secondary h-100" style="background: #080808;">
-                        <i class="fa-solid fa-file-invoice-dollar fa-2x text-gold mb-3"></i>
-                        <h4 class="text-white">Auditoría & NIIF</h4>
-                        <p class="small opacity-50">Automatización fiscal y normativas internacionales aplicadas a la empresa moderna.</p>
+                <!-- CURSO 2: SOFTWARE & CLOUD (DESTACADO) -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-5 rounded h-100 d-flex flex-column position-relative shadow-lg" style="background: linear-gradient(145deg, #0a0a0a, #000000); border: 2px solid var(--gold-data);">
+                        <div class="position-absolute top-0 start-50 translate-middle badge bg-dark text-gold border border-warning px-3 py-2 font-code" style="letter-spacing: 1px;">ALTA DEMANDA</div>
+                        <i class="fa-brands fa-aws fa-3x text-gold mb-4 mt-2"></i>
+                        <h4 class="text-gold mb-3">Arquitectura Multicloud & Big Data</h4>
+                        <p class="small opacity-75 mb-4">Despliegue de instancias en AWS/Azure, creación de pipelines de datos y desarrollo de APIs seguras mediante backend (Python/Django) para sistemas ERP.</p>
+                        
+                        <div class="mt-auto border-top border-secondary pt-4">
+                            <p class="text-success small font-code mb-2">>> ENTREVISTAS EN CURSO</p>
+                            <a href="https://wa.me/59167076448?text=Hola%20INAUS%2C%20solicito%20entrevista%20de%20admisión%20para%20el%20Bootcamp%20Arquitectura%20Multicloud." target="_blank" class="btn w-100 font-code fw-bold text-dark haptic-btn" style="background-color: var(--gold-data);">APLICAR AL PROGRAMA</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="p-4 rounded border border-warning h-100 position-relative shadow-lg" style="background: #0a0a0a;">
-                        <i class="fa-solid fa-code fa-2x text-gold mb-3"></i>
-                        <h4 class="text-gold">Sistemas & Cloud</h4>
-                        <p class="small opacity-75">Desarrollo de bases de datos, despliegue de MVPs (Django) y arquitectura de software.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="p-4 rounded border border-secondary h-100" style="background: #080808;">
-                        <i class="fa-solid fa-microchip fa-2x text-gold mb-3"></i>
-                        <h4 class="text-white">Hardware Sandbox</h4>
-                        <p class="small opacity-50">Técnicas de micro-soldadura, reballing industrial y recuperación de datos a nivel componente.</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="text-center mt-5">
-                <p class="font-code text-muted small">>> INICIALIZANDO_MÓDULOS_EDUCATIVOS...</p>
+                <!-- CURSO 3: HARDWARE -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-5 rounded border border-secondary h-100 d-flex flex-column" style="background: #080808;">
+                        <i class="fa-solid fa-microchip fa-3x text-gold mb-4"></i>
+                        <h4 class="text-white mb-3">Hardware Sandbox & Microsoldadura</h4>
+                        <p class="small opacity-50 mb-4">Intervención física de misión crítica. Reballing SMD de precisión y recuperación forense de datos a nivel componente (Laboratorio Calama).</p>
+                        
+                        <div class="mt-auto border-top border-secondary pt-4">
+                            <p class="text-warning small font-code mb-2">>> POSTULACIÓN ABIERTA</p>
+                            <a href="https://wa.me/56926244266?text=Hola%20INAUS%20Chile%2C%20solicito%20entrevista%20de%20admisión%20para%20el%20Bootcamp%20de%20Microsoldadura." target="_blank" class="btn btn-outline-light w-100 font-code">APLICAR AL PROGRAMA</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -76,5 +208,8 @@
         &copy; 2026 INAUS Ecosystem. Todos los derechos reservados.
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

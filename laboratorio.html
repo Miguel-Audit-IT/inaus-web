@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5CMP6FFY3T"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-5CMP6FFY3T');
-    </script>
-</head>
-<body>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,6 +30,15 @@
 
     <link rel="stylesheet" href="css/style.css">
     <meta name="theme-color" content="#030303">
+
+    <!-- Google tag (gtag.js) - INAUS Telemetry -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CMP6FFY3T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5CMP6FFY3T');
+    </script>
 </head>
 
 <body style="background-color: #030303; color: white;">
@@ -53,15 +53,13 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
-        style="background-color: rgba(3, 3, 3, 0.98); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <!-- EL MENÚ DEFINITIVO (SINCRONIZADO) -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2" style="background-color: rgba(3, 3, 3, 0.98); border-bottom: 1px solid rgba(255,255,255,0.05);">
         <div class="container-fluid px-lg-5">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="img/logo-inaus.png" alt="INAUS Technologies" height="65" class="me-3"
-                    style="filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5)); transform: translateY(-2px);">
+                <img src="img/logo-inaus.png" alt="INAUS Technologies" height="95" class="me-3" style="filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5)); transform: translateY(-2px);">
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#megaNavbar">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#megaNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="megaNavbar">
@@ -73,18 +71,12 @@
                                 <div class="col-lg-3 megamenu-sidebar">
                                     <h5 class="mega-title">Conoce INAUS</h5>
                                     <a href="nosotros.html" class="mega-link">Directorio Ejecutivo</a>
-                                    <a href="nosotros.html#proposito" class="mega-link">Propósito y Valores</a>
-                                    <a href="nosotros.html#nodos" class="mega-link">Nodos Operativos (Bolivia-Chile)</a>
-                                    <a href="contacto.html" class="mega-link">Contacto Corporativo</a>
+                                    <a href="nodos.html" class="mega-link">Nodos Operativos (Bolivia-Chile)</a>
+                                    <a href="legales.html" class="mega-link">Gobernanza & Legal</a>
                                 </div>
                                 <div class="col-lg-9 megamenu-content">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h5 class="mega-title text-gold font-code mb-4">LIDERAZGO</h5>
-                                            <p class="opacity-75 mb-4">"El Auditor que programa el futuro." Conoce la
-                                                visión arquitectónica de Miguel Jorge.</p>
-                                        </div>
-                                    </div>
+                                    <h5 class="mega-title text-gold font-code mb-4">LIDERAZGO</h5>
+                                    <p class="text-white opacity-75 mb-4">"El Auditor que programa el futuro." Conoce la visión arquitectónica de Miguel Jorge.</p>
                                 </div>
                             </div>
                         </div>
@@ -97,18 +89,15 @@
                                     <h5 class="mega-title text-gold">Áreas de Especialidad</h5>
                                     <a href="auditoria.html" class="mega-link">Auditoría 4.0 & Forense</a>
                                     <a href="informatica.html" class="mega-link">Sistemas Multicloud</a>
-                                    <a href="laboratorio.html" class="mega-link text-white">Hardware Sandbox <i
-                                            class="fa-solid fa-chevron-right ms-2" style="font-size: 0.7rem;"></i></a>
+                                    <a href="laboratorio.html" class="mega-link text-white">Hardware Sandbox <i class="fa-solid fa-chevron-right ms-2" style="font-size: 0.7rem;"></i></a>
                                 </div>
                                 <div class="col-lg-9 megamenu-content">
                                     <div class="row g-4">
                                         <div class="col-md-6">
-                                            <div class="mega-featured-card d-flex flex-column"
-                                                style="border-color: var(--gold-data);">
+                                            <div class="mega-featured-card d-flex flex-column" style="border-color: var(--gold-data);">
                                                 <i class="fa-solid fa-microchip fa-2x text-gold mb-3"></i>
                                                 <h6 class="text-white">Laboratorio Pro</h6>
-                                                <p class="small text-muted mb-0 mt-2">Intervención quirúrgica a nivel
-                                                    componente y recuperación de data.</p>
+                                                <p class="small text-white opacity-75 mb-0 mt-2">Intervención quirúrgica a nivel componente y recuperación de data.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -121,25 +110,48 @@
                         <div class="dropdown-menu megamenu shadow-lg" role="menu">
                             <div class="row g-0">
                                 <div class="col-lg-3 megamenu-sidebar">
-                                    <h5 class="mega-title">Actualidad</h5>
-                                    <a href="javascript:void(0);" class="mega-link">Reformas Tributarias (Chile)</a>
-                                    <a href="javascript:void(0);" class="mega-link">Normativas Financieras (Bolivia)</a>
+                                    <h5 class="mega-title">Publicaciones</h5>
+                                    <a href="perspectivas.html" class="mega-link">El Fin del Muestreo (IA)</a>
                                 </div>
                                 <div class="col-lg-9 megamenu-content">
-                                    <h5 class="mega-title text-gold font-code mb-4">ÚLTIMO BOLETÍN FISCAL</h5>
-                                    <p class="text-muted">Impacto de la IA en la Auditoría de la Industria Minera.</p>
+                                    <h4 class="text-white mb-3">Impacto de la IA en la Auditoría de la Industria Minera</h4>
+                                    <a href="perspectivas.html" class="btn btn-sm btn-outline-light font-code">LEER INFORME</a>
                                 </div>
                             </div>
                         </div>
                     </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle text-gold" href="#" data-bs-toggle="dropdown"><i class="fa-solid fa-store me-1"></i> Store</a>
+                        <div class="dropdown-menu megamenu shadow-lg" role="menu">
+                            <div class="row g-0">
+                                <div class="col-lg-3 megamenu-sidebar">
+                                    <h5 class="mega-title text-gold">Tienda Hardware</h5>
+                                    <span class="mega-link text-muted" style="cursor: not-allowed;">Equipos Apple (Próximamente)</span>
+                                    <span class="mega-link text-muted" style="cursor: not-allowed;">Workstations (Próximamente)</span>
+                                </div>
+                                <div class="col-lg-9 megamenu-content">
+                                    <div class="d-flex align-items-center h-100 p-4 border border-secondary rounded" style="background: rgba(245, 158, 11, 0.05);">
+                                        <div>
+                                            <span class="tech-tag bg-dark text-white border-secondary mb-3">FASE DE DESPLIEGUE</span>
+                                            <h4 class="text-white">INAUS Premium Store</h4>
+                                            <p class="text-white opacity-75 mb-0">La plataforma de distribución de hardware de élite y dispositivos móviles está en construcción.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item d-flex align-items-center ms-lg-2">
+                        <a class="nav-link font-code text-white" href="academia.html"><i class="fa-solid fa-graduation-cap text-gold me-1"></i> ACADEMY</a>
+                    </li>
                     <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
-                        <a href="contacto.html" class="btn btn-nav-cta haptic-btn"><span
-                                class="status-dot"></span>PORTAL CLIENTES</a>
+                        <a href="contacto.html" class="btn btn-nav-cta haptic-btn"><span class="status-dot"></span>PORTAL CLIENTES</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- FIN DEL MENÚ DEFINITIVO -->
 
     <header class="hero-corporate" style="padding-top: 180px;">
         <div class="bg-watermark"></div>
@@ -191,67 +203,68 @@
             </div>
         </div>
     </section>
-<section class="fluid-section border-top border-secondary" style="background-color: #050505;">
-            <div class="container">
-                <div class="text-center mb-5" data-aos="fade-up">
-                    <h6 class="text-gold font-code mb-3">// PROCEDIMIENTOS DE LABORATORIO</h6>
-                    <h2 class="corporate-title">Intervención de <strong>Hardware Crítico</strong></h2>
-                    <p class="opacity-75 mx-auto" style="max-width: 600px;">
-                        Operaciones de micro-soldadura con instrumental especializado en Calama - Antofagasta. Recupere su data o sus equipos de misión crítica.
-                    </p>
-                </div>
-
-                <div class="row g-4 align-items-center">
-                    
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="0">
-                        <div class="p-5 rounded border border-secondary h-100 position-relative" style="background: #080808;">
-                            <h4 class="text-white mb-2">Intervención L1</h4>
-                            <p class="small opacity-50 mb-4">Diagnóstico y micro-soldadura SMD base.</p>
-                            <h2 class="display-5 font-code text-white mb-4">USD 150<span class="fs-6 opacity-50">/equipo</span></h2>
-                            <ul class="list-unstyled small opacity-75 mb-5">
-                                <li class="mb-3"><i class="fa-solid fa-check text-muted me-2"></i> Diagnóstico bajo Microscopio</li>
-                                <li class="mb-3"><i class="fa-solid fa-check text-muted me-2"></i> Reemplazo de Componentes SMD</li>
-                                <li class="mb-3"><i class="fa-solid fa-xmark text-danger me-2"></i> Sin recuperación de Data Forense</li>
-                            </ul>
-                            <a href="https://wa.me/56926244266?text=Hola%20INAUS%20Chile%2C%20requiero%20una%20Intervención%20Técnica%20Nivel%201." target="_blank" class="btn btn-outline-light w-100 py-2 font-code">PROGRAMAR ENVÍO</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 position-relative" style="z-index: 2;" data-aos="fade-up" data-aos-delay="100">
-                        <div class="p-5 rounded h-100 position-relative shadow-lg" style="background: linear-gradient(145deg, #0a0a0a, #000000); border: 2px solid var(--gold-data);">
-                            <div class="position-absolute top-0 start-50 translate-middle badge bg-dark text-gold border border-warning px-3 py-2 font-code" style="letter-spacing: 1px;">
-                                ALTA CRITICIDAD
-                            </div>
-                            <h4 class="text-gold mb-2 mt-2">Data Recovery Forense</h4>
-                            <p class="small opacity-50 mb-4">Rescate de información y Reballing de precisión.</p>
-                            <h2 class="display-5 font-code text-white mb-4">USD 490<span class="fs-6 opacity-50">/equipo</span></h2>
-                            <ul class="list-unstyled small opacity-90 mb-5">
-                                <li class="mb-3"><i class="fa-solid fa-database text-gold me-2"></i> <strong>Extracción de Data (NAND)</strong></li>
-                                <li class="mb-3"><i class="fa-solid fa-microchip text-gold me-2"></i> Reballing Avanzado (Sugon/Sunshine)</li>
-                                <li class="mb-3"><i class="fa-solid fa-shield-check text-gold me-2"></i> Certificado de Integridad de Datos</li>
-                                <li class="mb-3"><i class="fa-solid fa-lock text-gold me-2"></i> Confidencialidad bajo norma Auditora</li>
-                            </ul>
-                            <a href="https://wa.me/56926244266?text=Hola%20INAUS%20Chile%2C%20es%20urgente%20un%20servicio%20de%20Data%20Recovery%20Forense%20(USD%20490)." target="_blank" class="btn w-100 py-3 font-code fw-bold text-dark haptic-btn" style="background-color: var(--gold-data);">ACTIVAR PROTOCOLO</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="p-5 rounded border border-secondary h-100 position-relative" style="background: #080808;">
-                            <h4 class="text-white mb-2">Reballing Estándar</h4>
-                            <p class="small opacity-50 mb-4">Reparación técnica sin rescate de datos.</p>
-                            <h2 class="display-5 font-code text-white mb-4">USD 450<span class="fs-6 opacity-50">/equipo</span></h2>
-                            <ul class="list-unstyled small opacity-75 mb-5">
-                                <li class="mb-3"><i class="fa-solid fa-check text-muted me-2"></i> Todo lo de Intervención L1</li>
-                                <li class="mb-3"><i class="fa-solid fa-check text-muted me-2"></i> Reballing Básico de ICs</li>
-                                <li class="mb-3"><i class="fa-solid fa-clock text-muted me-2"></i> Testeo térmico simple</li>
-                            </ul>
-                            <a href="https://wa.me/56926244266?text=Hola%20INAUS%20Chile%2C%20me%20interesa%20el%20Reballing%20Estándar." target="_blank" class="btn btn-outline-light w-100 py-2 font-code mt-4">PROGRAMAR ENVÍO</a>
-                        </div>
-                    </div>
-
-                </div>
+    
+    <section class="fluid-section border-top border-secondary" style="background-color: #050505;">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-gold font-code mb-3">// PROCEDIMIENTOS DE LABORATORIO</h6>
+                <h2 class="corporate-title">Intervención de <strong>Hardware Crítico</strong></h2>
+                <p class="opacity-75 mx-auto" style="max-width: 600px;">
+                    Operaciones de micro-soldadura con instrumental especializado en Calama - Antofagasta. Recupere su data o sus equipos de misión crítica.
+                </p>
             </div>
-        </section>
+
+            <div class="row g-4 align-items-center">
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="p-5 rounded border border-secondary h-100 position-relative" style="background: #080808;">
+                        <h4 class="text-white mb-2">Intervención L1</h4>
+                        <p class="small opacity-50 mb-4">Diagnóstico y micro-soldadura SMD base.</p>
+                        <h2 class="display-5 font-code text-white mb-4">USD 150<span class="fs-6 opacity-50">/equipo</span></h2>
+                        <ul class="list-unstyled small opacity-75 mb-5">
+                            <li class="mb-3"><i class="fa-solid fa-check text-muted me-2"></i> Diagnóstico bajo Microscopio</li>
+                            <li class="mb-3"><i class="fa-solid fa-check text-muted me-2"></i> Reemplazo de Componentes SMD</li>
+                            <li class="mb-3"><i class="fa-solid fa-xmark text-danger me-2"></i> Sin recuperación de Data Forense</li>
+                        </ul>
+                        <a href="https://wa.me/56926244266?text=Hola%20INAUS%20Chile%2C%20requiero%20una%20Intervención%20Técnica%20Nivel%201." target="_blank" class="btn btn-outline-light w-100 py-2 font-code">PROGRAMAR ENVÍO</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 position-relative" style="z-index: 2;" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-5 rounded h-100 position-relative shadow-lg" style="background: linear-gradient(145deg, #0a0a0a, #000000); border: 2px solid var(--gold-data);">
+                        <div class="position-absolute top-0 start-50 translate-middle badge bg-dark text-gold border border-warning px-3 py-2 font-code" style="letter-spacing: 1px;">
+                            ALTA CRITICIDAD
+                        </div>
+                        <h4 class="text-gold mb-2 mt-2">Data Recovery Forense</h4>
+                        <p class="small opacity-50 mb-4">Rescate de información y Reballing de precisión.</p>
+                        <h2 class="display-5 font-code text-white mb-4">USD 490<span class="fs-6 opacity-50">/equipo</span></h2>
+                        <ul class="list-unstyled small opacity-90 mb-5">
+                            <li class="mb-3"><i class="fa-solid fa-database text-gold me-2"></i> <strong>Extracción de Data (NAND)</strong></li>
+                            <li class="mb-3"><i class="fa-solid fa-microchip text-gold me-2"></i> Reballing Avanzado (Sugon/Sunshine)</li>
+                            <li class="mb-3"><i class="fa-solid fa-shield-check text-gold me-2"></i> Certificado de Integridad de Datos</li>
+                            <li class="mb-3"><i class="fa-solid fa-lock text-gold me-2"></i> Confidencialidad bajo norma Auditora</li>
+                        </ul>
+                        <a href="https://wa.me/56926244266?text=Hola%20INAUS%20Chile%2C%20es%20urgente%20un%20servicio%20de%20Data%20Recovery%20Forense%20(USD%20490)." target="_blank" class="btn w-100 py-3 font-code fw-bold text-dark haptic-btn" style="background-color: var(--gold-data);">ACTIVAR PROTOCOLO</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-5 rounded border border-secondary h-100 position-relative" style="background: #080808;">
+                        <h4 class="text-white mb-2">Reballing Estándar</h4>
+                        <p class="small opacity-50 mb-4">Reparación técnica sin rescate de datos.</p>
+                        <h2 class="display-5 font-code text-white mb-4">USD 450<span class="fs-6 opacity-50">/equipo</span></h2>
+                        <ul class="list-unstyled small opacity-75 mb-5">
+                            <li class="mb-3"><i class="fa-solid fa-check text-muted me-2"></i> Todo lo de Intervención L1</li>
+                            <li class="mb-3"><i class="fa-solid fa-check text-muted me-2"></i> Reballing Básico de ICs</li>
+                            <li class="mb-3"><i class="fa-solid fa-clock text-muted me-2"></i> Testeo térmico simple</li>
+                        </ul>
+                        <a href="https://wa.me/56926244266?text=Hola%20INAUS%20Chile%2C%20me%20interesa%20el%20Reballing%20Estándar." target="_blank" class="btn btn-outline-light w-100 py-2 font-code mt-4">PROGRAMAR ENVÍO</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">

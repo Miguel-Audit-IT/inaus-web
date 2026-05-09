@@ -27,18 +27,112 @@
 
 <body style="background-color: #030303; color: white;">
 
-    <!-- NAVBAR SIMPLIFICADO PARA LECTURA -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(3, 3, 3, 0.98); border-bottom: 1px solid rgba(255,255,255,0.05);">
+    <!-- EL MENÚ DEFINITIVO (SINCRONIZADO) -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-2" style="background-color: rgba(3, 3, 3, 0.98); border-bottom: 1px solid rgba(255,255,255,0.05);">
         <div class="container-fluid px-lg-5">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="img/logo-inaus.png" alt="INAUS" height="65" class="me-3">
+                <img src="img/logo-inaus.png" alt="INAUS Technologies" height="95" class="me-3" style="filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5)); transform: translateY(-2px);">
             </a>
-            <div class="ms-auto d-flex align-items-center">
-                <span class="text-gold font-code small me-4 d-none d-md-block">// READING_MODE_ACTIVE</span>
-                <a href="index.html" class="btn btn-outline-light btn-sm font-code"><i class="fa-solid fa-arrow-left me-2"></i>VOLVER AL HUB</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#megaNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="megaNavbar">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Nuestra Firma</a>
+                        <div class="dropdown-menu megamenu shadow-lg" role="menu">
+                            <div class="row g-0">
+                                <div class="col-lg-3 megamenu-sidebar">
+                                    <h5 class="mega-title">Conoce INAUS</h5>
+                                    <a href="nosotros.html" class="mega-link">Directorio Ejecutivo</a>
+                                    <a href="nodos.html" class="mega-link">Nodos Operativos (Bolivia-Chile)</a>
+                                    <a href="legales.html" class="mega-link">Gobernanza & Legal</a>
+                                </div>
+                                <div class="col-lg-9 megamenu-content">
+                                    <h5 class="mega-title text-gold font-code mb-4">LIDERAZGO</h5>
+                                    <p class="text-white opacity-75 mb-4">"El Auditor que programa el futuro." Conoce la visión arquitectónica de Miguel Jorge.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Servicios</a>
+                        <div class="dropdown-menu megamenu shadow-lg" role="menu">
+                            <div class="row g-0">
+                                <div class="col-lg-3 megamenu-sidebar">
+                                    <h5 class="mega-title text-gold">Áreas de Especialidad</h5>
+                                    <a href="auditoria.html" class="mega-link">Auditoría 4.0 & Forense</a>
+                                    <a href="informatica.html" class="mega-link">Sistemas Multicloud</a>
+                                    <a href="laboratorio.html" class="mega-link">Hardware Sandbox</a>
+                                </div>
+                                <div class="col-lg-9 megamenu-content">
+                                    <div class="row g-4">
+                                        <div class="col-md-6">
+                                            <div class="mega-featured-card d-flex flex-column" style="border-color: var(--gold-data);">
+                                                <i class="fa-solid fa-file-invoice-dollar fa-2x text-gold mb-3"></i>
+                                                <h6 class="text-white">División Activa: Compliance & Tax</h6>
+                                                <p class="small text-white opacity-75 mb-0 mt-2">Validación de estados financieros binacionales.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mega-featured-card d-flex flex-column">
+                                                <i class="fa-brands fa-python fa-2x text-gold mb-3"></i>
+                                                <h6 class="text-white">Desarrollo SaaS In-house</h6>
+                                                <p class="small text-white opacity-75 mb-0 mt-2">Motores contables propietarios desarrollados en Python y MongoDB.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle text-gold" href="#" data-bs-toggle="dropdown">Perspectivas</a>
+                        <div class="dropdown-menu megamenu shadow-lg" role="menu">
+                            <div class="row g-0">
+                                <div class="col-lg-3 megamenu-sidebar">
+                                    <h5 class="mega-title">Publicaciones</h5>
+                                    <a href="perspectivas.html" class="mega-link text-white">El Fin del Muestreo (IA) <i class="fa-solid fa-chevron-right ms-2" style="font-size: 0.7rem;"></i></a>
+                                </div>
+                                <div class="col-lg-9 megamenu-content">
+                                    <h4 class="text-white mb-3">Impacto de la IA en la Auditoría de la Industria Minera</h4>
+                                    <a href="perspectivas.html" class="btn btn-sm btn-outline-light font-code">LEER INFORME</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown has-megamenu">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="fa-solid fa-store me-1"></i> Store</a>
+                        <div class="dropdown-menu megamenu shadow-lg" role="menu">
+                            <div class="row g-0">
+                                <div class="col-lg-3 megamenu-sidebar">
+                                    <h5 class="mega-title text-gold">Tienda Hardware</h5>
+                                    <span class="mega-link text-muted" style="cursor: not-allowed;">Equipos Apple (Próximamente)</span>
+                                    <span class="mega-link text-muted" style="cursor: not-allowed;">Workstations (Próximamente)</span>
+                                </div>
+                                <div class="col-lg-9 megamenu-content">
+                                    <div class="d-flex align-items-center h-100 p-4 border border-secondary rounded" style="background: rgba(245, 158, 11, 0.05);">
+                                        <div>
+                                            <span class="tech-tag bg-dark text-white border-secondary mb-3">FASE DE DESPLIEGUE</span>
+                                            <h4 class="text-white">INAUS Premium Store</h4>
+                                            <p class="text-white opacity-75 mb-0">La plataforma de distribución de hardware de élite y dispositivos móviles está en construcción.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item d-flex align-items-center ms-lg-2">
+                        <a class="nav-link font-code text-white" href="academia.html"><i class="fa-solid fa-graduation-cap text-gold me-1"></i> ACADEMY</a>
+                    </li>
+                    <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
+                        <a href="contacto.html" class="btn btn-nav-cta haptic-btn"><span class="status-dot"></span>PORTAL CLIENTES</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
+    <!-- FIN DEL MENÚ DEFINITIVO -->
 
     <!-- CABECERA DEL ARTÍCULO -->
     <header style="padding-top: 180px; padding-bottom: 60px; background-color: #050505; border-bottom: 1px solid rgba(255,255,255,0.05);">
